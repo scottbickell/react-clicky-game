@@ -10,27 +10,16 @@ class App extends Component {
     friends
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
-
   // Map over this.state.friends and render a PhotoCard component for each friend object
   render() {
     return (
       <Wrapper>
-        <Title>Too many things I don't yet understand about React</Title>
+        <Title>I don't know enough React to complete this assignment. One week was not enough time for me.</Title>
         {this.state.friends.map(friend => (
           <PhotoCard
-            removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
-            name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
           />
         ))}
       </Wrapper>
